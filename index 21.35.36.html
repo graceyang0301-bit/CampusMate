@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="CampusMate 校园跑腿互助平台演示版">
+  <title>CampusMate · 校园互助</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="home" aria-label="CampusMate 首页">
+        <span class="brand-mark">cm<span>.</span></span>
+        <span class="brand-copy"><strong>CampusMate</strong><small>校园互助计划</small></span>
+      </a>
+      <div class="campus-pill"><span class="online-dot"></span> 示例大学 · 演示空间</div>
+      <p class="nav-label">工作空间</p>
+      <nav class="main-nav" aria-label="主导航">
+        <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span><span>首页概览</span></button>
+        <button class="nav-item" data-page="tasks"><span class="nav-icon">▤</span><span>任务大厅</span><span class="nav-count" id="nav-task-count">12</span></button>
+        <button class="nav-item" data-page="publish"><span class="nav-icon">＋</span><span>发布任务</span></button>
+        <button class="nav-item" data-page="help"><span class="nav-icon">↔</span><span>我的互助</span></button>
+      </nav>
+      <p class="nav-label">我的空间</p>
+      <nav class="main-nav" aria-label="个人导航">
+        <button class="nav-item" data-page="profile"><span class="nav-icon">◎</span><span>个人中心</span></button>
+        <button class="nav-item" data-page="rules"><span class="nav-icon">◇</span><span>互助公约</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="weekly-mini">
+          <div class="mini-head"><span>本周接单</span><strong id="sidebar-limit">2 / 5</strong></div>
+          <div class="progress-track"><div class="progress-fill" id="sidebar-progress" style="width:40%"></div></div>
+          <small>适度互助，也别忘了照顾自己。</small>
+        </div>
+        <button class="profile-mini" data-page="profile">
+          <span class="avatar">林</span><span class="profile-mini-copy"><strong>林同学</strong><small><span class="verified-dot">✓</span> 校园身份已模拟认证</small></span><span class="more">···</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="打开导航">☰</button>
+        <div class="breadcrumb"><span>CampusMate</span><span class="crumb-sep">/</span><strong id="breadcrumb-current">首页概览</strong></div>
+        <div class="topbar-actions">
+          <span class="demo-label"><span></span> DEMO 演示版</span>
+          <button class="icon-button" id="notice-btn" aria-label="查看提示">♧<i></i></button>
+          <button class="top-avatar" data-page="profile" aria-label="个人中心">林</button>
+        </div>
+      </header>
+      <div class="page-wrap" id="page-content" tabindex="-1"></div>
+      <footer class="site-footer"><span>CampusMate · 让校园里的善意流动起来</span><span>演示数据仅保存在当前浏览器</span></footer>
+    </main>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+  <div class="modal-backdrop hidden" id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card"><button class="modal-close" id="modal-close" aria-label="关闭">×</button><div id="modal-content"></div></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
